@@ -129,8 +129,37 @@
 
 .choose-option-border{
   background-image: url('./images/decoration.png');
+  background-position: center;
   background-repeat: no-repeat;
   min-height:1.5rem;
   width:100%;
+  margin: 2rem auto;
+}
 
+.choose-option .give-or-organise{
+  width:100%;
+  min-height:3rem;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.choose-option .give-or-organise a{
+  display:inline-block;
+  text-decoration:none;
+  color:black;
+  border:1px solid grey;
+  text-align: center;
+  width: calc(50% - 3rem);
+  padding-top:0.6rem;
+  padding-bottom:0.5rem;
+}
+
+.choose-option .give-or-organise span{
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 34px;
+  
+  
 }
