@@ -4,10 +4,14 @@ import logo from './logo.svg';
 import './App.css';
 import './components/LogOrSignIn';
 import LogOrSignIn from './components/LogOrSignIn';
+import MainMenu from './components/MainMenu';
 
 function App() {
   return (
-    <LogOrSignIn />
+    <>
+      <LogOrSignIn />
+      <MainMenu />
+    </>
   );
 }
 

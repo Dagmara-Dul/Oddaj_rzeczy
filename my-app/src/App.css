@@ -50,13 +50,42 @@
   display:inline-block;
   margin-left: 2rem;
   margin-top: 3rem;
+  margin-bottom:1.5rem;
   font-size:10px;
+  border:1px solid transparent;
+  padding: .5em;
 }
 
 .log-or-sign a:hover{
-  border:1px solid red;
+  border:1px solid #F2DF4E/*#FBF09D*/;
 }
 
 .log-or-sign span{
   font-weight: 100;
+}
+
+
+/* poniżej styluję komponent MainMenu*/
+.main-menu ul{
+  list-style:none;
+  display:flex;
+  justify-content: flex-end;
+}
+
+.main-menu ul li{
+  display:inline-block;
+  margin-left: 2rem;
+  
+}
+
+.main-menu ul li a{
+  text-decoration: none;
+  color:black;
+  font-weight:100;
+  border: 1px solid transparent;
+  padding:.5rem 1rem;
+}
+
+.main-menu ul li a:hover{
+  border: 0.5px solid grey;
 }
