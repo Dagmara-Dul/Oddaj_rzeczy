@@ -15,7 +15,8 @@ export default class StepsInfo extends Component{
                         <div className="steps-info-single-instruction">
                             <i class="fas fa-hands"></i>
                             <p className="quick-info">wybierz rzeczy</p>
-                            <p className="steps-more-info">ubrania,zabawki,sprzęt i inne</p>
+                            <p className='steps-more-info'>ubrania,zabawki,sprzęt i inne</p>
+                            {/* <p className={classNames('steps-more-info')}>ubrania,zabawki,sprzęt i inne</p> */}
                         </div>
                         <div className="steps-info-single-instruction">
                             <i class="fas fa-arrow-down"></i>
