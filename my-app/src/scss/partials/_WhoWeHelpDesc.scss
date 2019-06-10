@@ -1,0 +1,45 @@
+.who-we-help-desc {
+    padding-top: 3rem;
+
+    h2 {
+        font-weight: 300;
+        text-align: center;
+
+    }
+
+    .who-we-help-desc-image {
+        min-height: 1.5rem;
+        margin: 2rem auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./images/decoration.png');
+    }
+
+    .who-we-help-desc-org {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:50%;
+        margin:0 auto;
+        span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            font-size: 16px;
+            width: 10em;
+            height: 4em; 
+        }
+        span:hover{
+            border: 1px solid grey;
+        }
+        
+    }
+    p{
+        width:50%;
+        font-size:16px;
+        margin: 2rem auto;
+        text-align: center;
+    }
+}

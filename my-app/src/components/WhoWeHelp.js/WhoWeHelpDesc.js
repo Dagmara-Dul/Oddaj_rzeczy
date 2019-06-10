@@ -8,7 +8,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 export default class WhoWeHelpDesc extends Component{
     render(){
         return(
-            <div>
+            <section className="who-we-help-desc">
                 <h2>
                     Komu pomagamy?
                 </h2>
@@ -16,13 +16,13 @@ export default class WhoWeHelpDesc extends Component{
                 </div>
                 <div className="who-we-help-desc-org">
                 <span>Fundacjom</span>
-                <span>Organizacjom pozarządowym</span>
-                <span>Lokalnym zbiórkom</span>
+                <span>Organizacjom <br></br> pozarządowym</span>
+                <span>Lokalnym <br></br>zbiórkom</span>
                 </div>
                 <p>
                     W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.
                 </p>
-            </div>
+            </section>
         )
     }
 }

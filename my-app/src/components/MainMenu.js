@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 export default class MainMenu extends Component{
     render(){

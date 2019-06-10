@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Container, Row, Col} from 'react-bootstrap';
-import ContactForm from './ContactForm';
 
 
 
 
-export default class Contact extends Component{
+export default class ContactForm extends Component{
     render(){
         return(
-            <section className="contact">
-                <Container  className="contact-container">
+            <section className="contact-form">
+            Formularz kontaktowy
+                {/* <Container  className="contact-container">
                     <Row>
                         <Col sm={12} lg={4} >
                              <h3>Skontaktuj się z nami</h3>
@@ -20,14 +20,14 @@ export default class Contact extends Component{
                         </Col>
                         
                     </Row>
-                </Container>
-                Kontakt
+                </Container> */}
+                
             </section>
         )
     }
 }
 
 ReactDOM.render(
-    <Contact/>,
+    <ContactForm/>,
     document.querySelector('#root')
 )
