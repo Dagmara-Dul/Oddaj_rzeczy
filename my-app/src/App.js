@@ -11,6 +11,7 @@ import AboutUs from './components/AboutUs';
 import WhoWeHelp from './components/WhoWeHelp.js';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Button from './elements/Button';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <StepsInfo />
       <AboutUs />
       <WhoWeHelp />
-      
+      <Button text="wcisnij" variant="primary" />
       <Contact />
       <Footer />
     </>

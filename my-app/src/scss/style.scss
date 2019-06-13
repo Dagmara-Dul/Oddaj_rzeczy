@@ -1,3 +1,6 @@
+// $body-bg: #000; 
+@import '~bootstrap/scss/bootstrap.scss'; //import styli scss
+@import './modules/reset';
 @import './partials/AboutUs';
 @import './partials/AboutUsDesc';
 @import './partials//WhoWeHelp';

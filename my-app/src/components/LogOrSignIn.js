@@ -8,7 +8,7 @@ export default class LogOrSignIn extends Component{
         return(
             <Container>
                 <Row>
-                    <Col xs={12} md={12} l={4}>
+                    <Col xs={12} md={12} lg={4}>
                         <section className="container log-sign">
                             <div className="log-or-sign">
                                 <a href="#"><span>Zaloguj</span></a>
