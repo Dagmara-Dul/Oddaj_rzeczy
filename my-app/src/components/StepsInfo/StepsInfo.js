@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 export default class StepsInfo extends Component{
     render(){
         return(
-            <section className="steps-info-section">
+            <section className="steps-info-section" id="what-is-it-about">
                 
                 <div className="steps-info-section-package container">
                     <p>Wystarczą 4 proste kroki</p>

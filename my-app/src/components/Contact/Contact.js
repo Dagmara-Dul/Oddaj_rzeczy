@@ -9,7 +9,7 @@ import ContactForm from './ContactForm';
 export default class Contact extends Component{
     render(){
         return(
-            <section className="contact">
+            <section className="contact" id="contact">
                 <Container  className="contact-container">
                     <Row>
                         <Col sm={12} lg={4} >

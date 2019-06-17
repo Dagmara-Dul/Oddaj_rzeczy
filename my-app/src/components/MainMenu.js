@@ -2,20 +2,25 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+// import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 
 export default class MainMenu extends Component{
+
+
+
     render(){
         return(
             <section className="container main-menu">
                 <div className="main-menu-div">
                     <ul>
-                        <li><a href="#"><span>Start</span></a></li>
-                        <li><a href="#"><span>O co chodzi?</span></a></li>
-                        <li><a href="#"><span>O nas</span></a></li>
-                        <li><a href="#"><span>Fundacje i organizacje</span></a></li>
-                        <li><a href="#"><span>Kontakt</span></a></li>
+                        <li><Link activeClass="active" to="start" spy={true} smooth={true} offset={0} duration={500} ><span>Start</span></Link></li>
+                        <li><Link activeClass="active" to="what-is-it-about" spy={true} smooth={true} offset={0} duration={500} ><span>O co chodzi?</span></Link></li>
+                        <li><Link activeClass="active" to="about-us" spy={true} smooth={true} offset={0} duration={500} ><span>O nas</span></Link></li>
+                        <li><Link activeClass="active" to="fund-and-organ" spy={true} smooth={true} offset={0} duration={500} ><span>Fundacje i organizacje</span></Link></li>
+                        <li><Link activeClass="active" to="contact" spy={true} smooth={true} offset={0} duration={500} ><span>Kontakt</span></Link></li>
                     </ul>
                 </div>
             </section>

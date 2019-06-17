@@ -8,7 +8,7 @@ import ChooseOption from './ChooseOption';
 export default class StartSection extends Component{
     render(){
         return(
-            <section className="start-section">
+            <section className="start-section" id="start">
                 
                 <LogOrSignIn />
                 <MainMenu />

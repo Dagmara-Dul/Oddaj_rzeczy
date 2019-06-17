@@ -10,7 +10,7 @@ import AboutUsImage from './AboutUsImage';
 export default class AboutUs extends Component{
     render(){
         return(
-            <section className="about-us">
+            <section className="about-us" id="about-us">
                 
                 <Container fluid={true} className="about-us-container">
                     <Row>

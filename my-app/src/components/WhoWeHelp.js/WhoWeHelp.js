@@ -9,7 +9,7 @@ import WhoWeHelpDesc from './WhoWeHelpDesc';
 export default class WhoWeHelp extends Component{
     render(){
         return(
-            <section className="who-we-help">
+            <section className="who-we-help" id="fund-and-organ">
                 
                 <Container  className="who-we-help-container">
                     <Row>
