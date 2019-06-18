@@ -1,6 +1,16 @@
+
 html, body{
     margin:0;
     padding:0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    font-size:14px;
+
+    @include md {
+        font-size: 16px;
+    }
+
+    @include xl{
+        font-size:24px;
+    }
 }

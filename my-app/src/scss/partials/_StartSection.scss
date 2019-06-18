@@ -1,9 +1,17 @@
 /* poniżej styluję komponent StartSection*/
-.start-section{
+.start-section {
+  // display: none;
+background-image: url('./images/ancient-animals-assorted-1038684.jpg');
+background-size:cover;
+min-height:3em;
+  @include lg {
+    // display: block;
+
     min-height: 90vh;
-    width:100%;
+    width: 100%;
     background-image: url('./images/header_start_img.jpg');
     background-size: auto 100%;
-    
+
     background-repeat: no-repeat;
   }
+}

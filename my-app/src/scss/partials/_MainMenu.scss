@@ -1,10 +1,48 @@
 
 /* poniżej styluję komponent MainMenu*/
 #main-menu-hamburger{
+
   @include lg{
     display:none;
   }
 }
+
+#main-menu-logo{
+
+  @include lg{
+    display:none;
+  }
+}
+
+.main-menu-div-sm{
+  display:flex;
+  justify-content: space-between;
+  // background-image: url('./images/attractive-backdrop-background-838423\ \(1\).jpg');
+  // background-repeat: no-repeat;
+  // background-size:cover;
+  
+  background-color:rgba(23, 70, 71, 0.82);// rgba(64, 195, 199, 0.52); // #174647;// #C70003;// #C2F1E7; rgb(64, 195, 199)
+  min-height:3px;
+  width:100%;
+  padding: 0.5em;
+
+  #main-menu-hamburger{
+    
+    color:white;
+    margin-right: 2em;
+  }
+
+  #main-menu-logo{
+    color:white;
+    margin-left: 2em;
+  }
+
+  @include lg{
+    display:none;
+  }
+
+}
+
 .main-menu ul{
   display:none;
   @include lg{
@@ -22,14 +60,17 @@
     display:inline-block;
     margin-left: 2rem;
     
+    
   }
   
   .main-menu ul li a{
+    font-size:16px;
     text-decoration: none;
     color:black;
     font-weight:100;
     border: 1px solid transparent;
     padding:.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.72);
   }
   
   .main-menu ul li a:hover{
