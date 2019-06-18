@@ -6,19 +6,19 @@ import {Container, Row, Col} from 'react-bootstrap';
 export default class LogOrSignIn extends Component{
     render(){
         return(
-            
+            <section className="container log-sign">
                 <Row>
-                    <Col xs={12} md={12} lg={4}>
-                        <section className="container log-sign">
+                    <Col xs={12} lg={{ span:4, offset:8}}>
+                        
                             <div className="log-or-sign">
                                 <a href="#"><span>Zaloguj</span></a>
                                 <a href="#"><span>Załóż konto</span></a>
                             </div>
-                        </section>
+                       
                     </Col>
                     
                 </Row>
-           
+            </section>
         )
     }
 }

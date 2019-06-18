@@ -1,10 +1,22 @@
 
 /* poniżej styluję komponent MainMenu*/
+#main-menu-hamburger{
+  @include lg{
+    display:none;
+  }
+}
 .main-menu ul{
+  display:none;
+  @include lg{
+    display:block;
+    
+  
+
     list-style:none;
     display:flex;
     justify-content: flex-end;
   }
+}
   
   .main-menu ul li{
     display:inline-block;

@@ -15,7 +15,8 @@ export default class MainMenu extends Component{
         return(
             <section className="container main-menu">
                 <div className="main-menu-div">
-                    <ul>
+                <span className="fas fa-bars mobile-menu" id="main-menu-hamburger"></span>
+                    <ul className="main-menu-navbar">
                         <li><Link activeClass="active" to="start" spy={true} smooth={true} offset={0} duration={600} ><span>Start</span></Link></li>
                         <li><Link activeClass="active" to="what-is-it-about" spy={true} smooth={true} offset={0} duration={600} ><span>O co chodzi?</span></Link></li>
                         <li><Link activeClass="active" to="about-us" spy={true} smooth={true} offset={0} duration={600} ><span>O nas</span></Link></li>

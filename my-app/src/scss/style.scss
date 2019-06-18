@@ -2,6 +2,7 @@
 @import '~bootstrap/scss/bootstrap.scss'; //import styli scss
 @import './modules/reset';
 @import './modules/all';
+@import './modules/mixins';
 
 @import './partials/LogOrSignIn';
 @import './partials/MainMenu';

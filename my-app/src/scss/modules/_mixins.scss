@@ -1,0 +1,63 @@
+//ściaga
+// @mixin tablet{
+//     @media(min-width: 640px){
+//         @content
+//     }
+// }
+
+// .images{
+//     > *{
+//         width: 100%;
+
+//     }
+//     .rabbit-img{
+//         background:url("../images/rabbit.png" );
+//         background-position: center;
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//     }
+
+//     @include tablet{
+//         display:flex;
+//         >*{
+//             width:50%;
+//         }
+//         img{
+//             align-self:flex-start; //domyslnie wszystkie elementy flex maja ustawione "strech" dlatego musimy mu tutaj wskazac zeby ustawial sie na poczatku a nie wypelnial calosci boxu
+//         }
+//     }
+// }
+
+@mixin xs {
+    @media (max-width: 576px){
+        @content
+    }
+};
+
+
+@mixin sm {
+    @media (min-width: 576px){
+        @content
+    }
+};
+
+
+@mixin md {
+    @media (min-width: 768px){
+        @content
+    }
+};
+
+
+@mixin lg {
+    @media (min-width: 992px){
+        @content
+    }
+};
+
+
+@mixin xl {
+    @media (min-width: 1200px){
+        @content
+    }
+};
