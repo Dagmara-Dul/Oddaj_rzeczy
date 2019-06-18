@@ -1,0 +1,63 @@
+/* poniżej styluję komponent ChooseOption*/
+.choose-option{
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    width:100%;
+    height: 80vh;
+    
+  }
+  .choose-option-div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    
+    width:50%;
+  
+  }
+  .choose-option p{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  .choose-option p span{
+    font-size:34px;
+    font-weight: 100;
+  }
+  
+  .choose-option-border{
+    background-image: url('./images/decoration.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height:1.5rem;
+    width:100%;
+    margin: 2rem auto;
+  }
+  
+  .choose-option .give-or-organise{
+    width:80%;
+    min-height:3rem;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    margin-top: 3rem;
+  }
+  
+  .choose-option .give-or-organise a{
+    display:inline-block;
+    text-decoration:none;
+    color:black;
+    border:1px solid grey;
+    text-align: center;
+    width: calc(50% - 2rem);
+    padding-top:0.6rem;
+    padding-bottom:0.5rem;
+  }
+  
+  .choose-option .give-or-organise span{
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 34px;
+    
+    
+  }

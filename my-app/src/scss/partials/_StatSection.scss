@@ -1,0 +1,40 @@
+/*StatSection*/
+.stat-section{
+    width:100%;
+    min-height: 5rem;
+     background-image: url('./images/art-background-blank-1020317.jpg');
+    background-size:contain; 
+    /* background-color: #F5DA00; */
+  
+    display:flex;
+    justify-content:space-around;
+  }
+  
+  .stat-section .stat{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: calc(33% - 20rem);
+    margin-bottom:2rem;
+  }
+  
+  .stat-section .stat span{
+    text-transform:uppercase;
+    color:#5D5721;
+    text-align: center;
+  }
+  
+  .stat-section .stat-section-text{
+    text-align: center;
+    font-weight: 100;
+    color:#5D5721;
+  
+  }
+  
+  .stat-nr{
+    font-size:72px;
+    font-weight: 100;
+    color:#5D5721;
+    margin-bottom:2rem;
+  }

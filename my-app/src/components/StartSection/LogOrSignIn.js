@@ -6,7 +6,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 export default class LogOrSignIn extends Component{
     render(){
         return(
-            <Container>
+            
                 <Row>
                     <Col xs={12} md={12} lg={4}>
                         <section className="container log-sign">
@@ -18,7 +18,7 @@ export default class LogOrSignIn extends Component{
                     </Col>
                     
                 </Row>
-            </Container>
+           
         )
     }
 }

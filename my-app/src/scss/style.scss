@@ -1,6 +1,14 @@
 // $body-bg: #000; 
 @import '~bootstrap/scss/bootstrap.scss'; //import styli scss
 @import './modules/reset';
+@import './modules/all';
+
+@import './partials/LogOrSignIn';
+@import './partials/MainMenu';
+@import './partials/StartSection';
+@import './partials/ChooseOption';
+@import './partials/StatSection';
+@import './partials/StepsInfo';
 @import './partials/AboutUs';
 @import './partials/AboutUsDesc';
 @import './partials//WhoWeHelp';
