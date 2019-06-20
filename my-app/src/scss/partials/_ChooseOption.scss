@@ -75,8 +75,20 @@
 
 .choose-option-div-xs{
   // background-image: url('./images/ancient-animals-assorted-1038684.jpg');
+  padding:3em 2em;
   h3, p, span{
     color:white;
+  }
+  h3{
+    font-size: 14px;
+  }
+  p span{
+    font-size: 16px;
+    text-shadow: 1px 1px 2px #000000;
+    &:first-of-type{
+      text-transform: uppercase;
+
+    }
   }
   @include lg{
     display:none;

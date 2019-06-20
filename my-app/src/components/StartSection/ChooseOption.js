@@ -7,12 +7,12 @@ import { Link } from 'react';
 export default class ChooseOption extends Component{
     render(){
         return(
-            <Row>
-                <Col xs={12} lg={{ span:5, offset:7}}  >
+            <Row style={{ marginLeft: 0, marginRight: 0 }} >
+                <Col xs={12} lg={{ span:5, offset:7}} style={{ marginLeft: 0, marginRight: 0 }} >
                 <section className="choose-option">
                     <div className="choose-option-div-xs">
                         <h3>Masz w domu rzeczy, z którymi nie wiesz co zrobić?</h3>
-                        <p>Oddaj je potrzebującym <br></br><span>- szybko i w zaufane ręce</span></p>
+                        <p><span>Oddaj je potrzebującym</span> <br></br><span>- szybko i w zaufane ręce</span></p>
                         <a href="#"><span>Załóż konto</span></a>
                     </div>
                     <div className="choose-option-div">
