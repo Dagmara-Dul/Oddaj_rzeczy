@@ -1,5 +1,13 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import {
+    HashRouter,
+    Route,
+    Link,
+    Redirect,
+    Switch,
+    NavLink,
+  } from 'react-router-dom';
 
 
 
@@ -14,7 +22,7 @@ export default class StepsInfo extends Component{
                     <div className="steps-info-instructions">
                         <div className="steps-info-single-instruction">
                             <i class="fas fa-hands"></i>
-                            <p className="quick-info">wybierz rzeczy</p>
+                            <p className="quick-info">Wybierz rzeczy</p>
                             <p className='steps-more-info'>ubrania,zabawki,sprzęt i inne</p>
                             {/* <p className={classNames('steps-more-info')}>ubrania,zabawki,sprzęt i inne</p> */}
                         </div>
@@ -34,7 +42,12 @@ export default class StepsInfo extends Component{
                             <p className="steps-more-info">kurier przyjedzie w dogodnym terminie</p>
                         </div>
                     </div>
-                    <a className="steps-sign-in" href="#"><span>Załóż konto</span></a>
+                    {/* <a className="steps-sign-in" href="#"><span>Załóż konto</span></a> */}
+                    <HashRouter>
+                        <Link  style={{ textDecoration: 'none' }} to="/signin" className="steps-sign-in">
+                            <span>Załóż konto</span>
+                        </Link>
+                    </ HashRouter>
                 </div>
             </section>
         )

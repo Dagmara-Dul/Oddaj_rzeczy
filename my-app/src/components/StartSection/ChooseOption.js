@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Container, Row, Col} from 'react-bootstrap';
-import { Link } from 'react';
-
+// import { Link } from 'react';
+import {
+    HashRouter,
+    Route,
+    Link,
+    Redirect,
+    Switch,
+    NavLink,
+  } from 'react-router-dom';
 
 export default class ChooseOption extends Component{
     render(){
@@ -19,8 +26,18 @@ export default class ChooseOption extends Component{
                         <p><span>Zacznij pomagać!</span><span>Oddaj niechciane rzeczy w zaufane ręce</span></p>
                         <div className="choose-option-border"></div>
                         <div className="give-or-organise">
-                            <a href="#"><span> oddaj <br></br> rzeczy </span></a>
-                            <a href="#"><span> zorganizuj <br></br> zbiórkę</span></a>
+                            <HashRouter>
+                                <Link  style={{ textDecoration: 'none' }} to="/login">
+                                    <span>oddaj <br></br> rzeczy</span>
+                                </Link>
+                            </ HashRouter>
+                            <HashRouter>
+                                <Link  style={{ textDecoration: 'none' }} to="/login">
+                                    <span>zorganizuj <br></br> zbiórkę</span>
+                                </Link>
+                            </ HashRouter>
+                            {/* <a href="#"><span> oddaj <br></br> rzeczy </span></a>
+                            <a href="#"><span> zorganizuj <br></br> zbiórkę</span></a> */}
                         </div>
                     </div>
                 </section>

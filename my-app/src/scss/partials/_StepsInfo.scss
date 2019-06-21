@@ -32,7 +32,7 @@
   }
   
   .steps-info-single-instruction{
-    width: calc(25% - 8rem);
+    width: calc(25% - 1em);
     min-height: 8rem;
   
     display:flex;
@@ -49,12 +49,26 @@
     margin-top: 2rem;
     font-size: 14px;
     text-align: center;
+    position:relative;
+
+    &:after{
+      content:"-------------";
+      color: transparent;
+      border-bottom: 1px solid grey;
+      display:inline-block;
+      position:absolute;
+      top:1em;
+      left:35%;
+
+    }
   }
   
   .steps-info-single-instruction .steps-more-info{
     margin-top: 2rem;
     font-size: 14px;
     text-align: center;
+    width:80%;
+    margin: 0 auto;
   }
   
   .steps-sign-in{
