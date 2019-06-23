@@ -35,7 +35,3 @@ export default class ContactForm extends Component{
     }
 }
 
-ReactDOM.render(
-    <ContactForm/>,
-    document.querySelector('#root')
-)

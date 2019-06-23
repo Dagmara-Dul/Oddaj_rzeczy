@@ -27,7 +27,3 @@ export default class Contact extends Component{
     }
 }
 
-ReactDOM.render(
-    <Contact/>,
-    document.querySelector('#root')
-)

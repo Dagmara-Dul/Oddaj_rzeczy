@@ -30,7 +30,4 @@ export default class MainPage extends Component{
     }
 }
 
-ReactDOM.render(
-    <MainPage />,
-    document.querySelector('#root')
-)
+

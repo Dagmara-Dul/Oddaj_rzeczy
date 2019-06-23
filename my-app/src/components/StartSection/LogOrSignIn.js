@@ -40,7 +40,3 @@ export default class LogOrSignIn extends Component{
     }
 }
 
-ReactDOM.render(
-    <LogOrSignIn />,
-    document.querySelector('#root')
-)

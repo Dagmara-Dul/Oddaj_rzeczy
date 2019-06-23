@@ -27,7 +27,3 @@ export default class AboutUs extends Component{
     }
 }
 
-ReactDOM.render(
-    <AboutUs />,
-    document.querySelector('#root')
-)

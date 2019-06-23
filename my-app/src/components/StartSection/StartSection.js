@@ -11,14 +11,10 @@ export default class StartSection extends Component{
             <section className="start-section" id="start">
                 
                 <LogOrSignIn />
-                <MainMenu />
+                <MainMenu isHome={true}/>
                 <ChooseOption />
             </section>
         )
     }
 }
 
-ReactDOM.render(
-    <StartSection />,
-    document.querySelector('#root')
-)

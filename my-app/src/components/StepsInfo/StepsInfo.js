@@ -54,7 +54,3 @@ export default class StepsInfo extends Component{
     }
 }
 
-ReactDOM.render(
-    <StepsInfo/>,
-    document.querySelector('#root')
-)

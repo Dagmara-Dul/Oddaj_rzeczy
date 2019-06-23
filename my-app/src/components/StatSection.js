@@ -28,7 +28,3 @@ export default class StatSection extends Component{
     }
 }
 
-ReactDOM.render(
-    <StatSection />,
-    document.querySelector('#root')
-)

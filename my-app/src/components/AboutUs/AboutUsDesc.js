@@ -20,7 +20,3 @@ export default class AboutUsDesc extends Component{
     }
 }
 
-ReactDOM.render(
-    <AboutUsDesc />,
-    document.querySelector('#root')
-)

@@ -17,7 +17,3 @@ export default class Footer extends Component{
     }
 }
 
-ReactDOM.render(
-    <Footer/>,
-    document.querySelector('#root')
-)

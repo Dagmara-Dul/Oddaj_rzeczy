@@ -40,7 +40,3 @@ export default class LogInPage extends Component{
     }
 }
 
-ReactDOM.render(
-    <LogInPage/>,
-    document.querySelector('#root')
-)

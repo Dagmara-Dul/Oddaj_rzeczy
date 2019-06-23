@@ -17,7 +17,4 @@ export default class SignIn extends Component{
     }
 }
 
-ReactDOM.render(
-    <SignIn />,
-    document.querySelector('#root')
-)
+ 

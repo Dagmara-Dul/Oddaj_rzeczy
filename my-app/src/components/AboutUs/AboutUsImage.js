@@ -20,8 +20,5 @@ export default class AboutUsImage extends Component{
     }
 }
 
-ReactDOM.render(
-    <AboutUsImage />,
-    document.querySelector('#root')
-)
+
 

@@ -27,7 +27,3 @@ export default class WhoWeHelpDesc extends Component{
     }
 }
 
-ReactDOM.render(
-    <WhoWeHelpDesc/>,
-    document.querySelector('#root')
-)

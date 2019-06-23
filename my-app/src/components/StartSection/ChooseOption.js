@@ -9,13 +9,14 @@ import {
     Redirect,
     Switch,
     NavLink,
+    withRouter,
   } from 'react-router-dom';
 
-export default class ChooseOption extends Component{
+ class ChooseOption extends Component{
     render(){
         return(
             <Row style={{ marginLeft: 0, marginRight: 0 }} >
-                <Col xs={12} lg={{ span:5, offset:7}} style={{ marginLeft: 0, marginRight: 0 }} >
+                <Col xs={12} lg={{ span:5, offset:7}}  >
                 <section className="choose-option">
                     <div className="choose-option-div-xs">
                         <h3>Masz w domu rzeczy, z którymi nie wiesz co zrobić?</h3>
@@ -26,18 +27,17 @@ export default class ChooseOption extends Component{
                         <p><span>Zacznij pomagać!</span><span>Oddaj niechciane rzeczy w zaufane ręce</span></p>
                         <div className="choose-option-border"></div>
                         <div className="give-or-organise">
-                            <HashRouter>
+                            
                                 <Link  style={{ textDecoration: 'none' }} to="/login">
                                     <span>oddaj <br></br> rzeczy</span>
                                 </Link>
-                            </ HashRouter>
-                            <HashRouter>
+                            
+                            
                                 <Link  style={{ textDecoration: 'none' }} to="/login">
                                     <span>zorganizuj <br></br> zbiórkę</span>
                                 </Link>
-                            </ HashRouter>
-                            {/* <a href="#"><span> oddaj <br></br> rzeczy </span></a>
-                            <a href="#"><span> zorganizuj <br></br> zbiórkę</span></a> */}
+                            
+                            
                         </div>
                     </div>
                 </section>
@@ -47,7 +47,4 @@ export default class ChooseOption extends Component{
     }
 }
 
-ReactDOM.render(
-    <ChooseOption />,
-    document.querySelector('#root')
-)
+export default withRouter ( ChooseOption );

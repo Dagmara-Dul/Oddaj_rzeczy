@@ -32,7 +32,3 @@ export default class WhoWeHelp extends Component{
     }
 }
 
-ReactDOM.render(
-    <WhoWeHelp/>,
-    document.querySelector('#root')
-)

@@ -40,7 +40,3 @@ export default class SignInForm extends Component{
     }
 }
 
-ReactDOM.render(
-    <SignInForm />,
-    document.querySelector('#root')
-)
