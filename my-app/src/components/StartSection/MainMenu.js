@@ -15,6 +15,7 @@ import { faTshirt } from '@fortawesome/free-solid-svg-icons';
 
 const hamburger = <FontAwesomeIcon icon={ faBars } className="fa-2x" />
 const tShirt = <FontAwesomeIcon icon= { faTshirt } className="fa-2x" />
+
 const options = { spy:true, smooth:true, offset:0, duration:600, activeClass:"active" }
 
 const menuItem = [
@@ -51,7 +52,7 @@ export default class MainMenu extends Component{
         return menuItem.map((item)=>{
             const Component = this.props.isHome ? Link : NavLink;
             return( 
-            <li><Component to={this.props.isHome ? item.to : item.path} {...options} ><span> {item.name}</span></Component></li>
+            <li  key={item.id}><Component to={this.props.isHome ? item.to : item.path} {...options} ><span> {item.name}</span></Component></li> //unique key problem
             )
         }) 
     }

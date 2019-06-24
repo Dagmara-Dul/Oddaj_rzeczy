@@ -21,23 +21,23 @@ export default class StepsInfo extends Component{
                     <div className="steps-info-image"></div>
                     <div className="steps-info-instructions">
                         <div className="steps-info-single-instruction">
-                            <i class="fas fa-hands"></i>
+                            <i className="fas fa-hands"></i>
                             <p className="quick-info">Wybierz rzeczy</p>
                             <p className='steps-more-info'>ubrania,zabawki,sprzęt i inne</p>
                             {/* <p className={classNames('steps-more-info')}>ubrania,zabawki,sprzęt i inne</p> */}
                         </div>
                         <div className="steps-info-single-instruction">
-                            <i class="fas fa-arrow-down"></i>
+                            <i className="fas fa-arrow-down"></i>
                             <p className="quick-info">spakuj je</p>
                             <p className="steps-more-info">skorzystaj z worków na śmieci</p>
                         </div>
                         <div className="steps-info-single-instruction">
-                            <i class="fas fa-binoculars"></i>
+                            <i className="fas fa-binoculars"></i>
                             <p className="quick-info">Zdecyduj komu chcesz pomóc</p>
                             <p className="steps-more-info">wybierz zaufane miejsce</p>
                         </div>
                         <div className="steps-info-single-instruction">
-                            <i class="fas fa-sync"></i>
+                            <i className="fas fa-sync"></i>
                             <p className="quick-info">Zamów kuriera</p>
                             <p className="steps-more-info">kurier przyjedzie w dogodnym terminie</p>
                         </div>

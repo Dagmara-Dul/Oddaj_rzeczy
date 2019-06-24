@@ -1,0 +1,25 @@
+//HelloUser poniżej
+
+.hello-user{
+    display:none;
+    @include lg{
+        display:block;
+        display:flex;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        justify-content: flex-end;
+        
+    }
+    span{
+        @include lg{
+            font-size:14px;
+            display:block;
+            margin-left: 1em;
+        }
+    }
+
+    a{
+        text-decoration:none;
+        color: grey;
+    }
+}
