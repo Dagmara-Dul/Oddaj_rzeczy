@@ -15,5 +15,20 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "donation": [
+    {
+      "numberOfSacks": "2",
+      "id": 1
+    },
+    {
+      "numberOfSacks": "2",
+      "isClothesToWear": true,
+      "isClothesToBin": false,
+      "isToys": false,
+      "isBooks": true,
+      "isOther": false,
+      "id": 2
+    }
+  ]
 }

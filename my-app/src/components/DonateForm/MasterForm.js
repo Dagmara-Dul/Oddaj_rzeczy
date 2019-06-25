@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 
-export default class MasterForm extends Component{
+ class MasterForm extends Component{
     constructor(props){
         super(props)
 
@@ -15,9 +15,12 @@ export default class MasterForm extends Component{
             numberOfSacks: 0,
         }
 
-        this.handleChange = this.handleChange.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.handleClothesToWearChange = this.handleClothesToWearChange.bind(this);
     }
-
+    // handleClothesToWearChange (e){
+    //     const { }
+    // }
     handleChange(event) {
         const { name, checked } = event.target
         this.setState({
@@ -80,7 +83,7 @@ export default class MasterForm extends Component{
 
                 <div className="form-group"> 
                     <legend>Zaznacz co chcesz oddać</legend>
-                    <input type="checkbox"  name="clothesToWear" checked={this.state.isClothesToWear} onChange={this.props.handleChange} />ubrania, które nadają się do ponownego użycia
+                    <input type="checkbox"  name="clothesToWear" checked={this.state.isClothesToWear} onChange={this.props.handleClothesToWearChange} />ubrania, które nadają się do ponownego użycia
                     <input type="checkbox"  name="clothesToBin" checked={this.state.isClothesToBin} onChange={this.props.handleChange}/>ubrania, do wyrzucenia
                     <input type="checkbox"  name="toys" checked={this.state.isToys} onChange={this.props.handleChange} />zabawki
                     <input type="checkbox"  name="books" checked={this.state.isBooks} onChange={this.props.handleChange} />książki
