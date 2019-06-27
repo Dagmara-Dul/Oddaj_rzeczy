@@ -29,6 +29,15 @@
       "isBooks": true,
       "isOther": false,
       "id": 2
+    },
+    {
+      "numberOfSacks": "5",
+      "isClothesToWear": true,
+      "isClothesToBin": false,
+      "isToys": false,
+      "isBooks": false,
+      "isOther": false,
+      "id": 3
     }
   ]
 }

@@ -11,7 +11,7 @@ export default class LoggedSite extends Component{
             <>
                 <HelloUser />
                 <MainMenu />
-                <Form />
+                <MasterForm />
                 
             </>
         )

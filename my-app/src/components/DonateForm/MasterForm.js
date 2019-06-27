@@ -1,31 +1,57 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 
- class MasterForm extends Component{
+export default class MasterForm extends Component{
     constructor(props){
         super(props)
 
         this.state={
-            currentStep:1,
-            isClothesToWear: false,
-            isClothesToBin: false,
-            isToys: false,
-            isBooks: false,
-            isOther: false,
-            numberOfSacks: 0,
+            form:[
+                 {
+                    name: "clothesToWear",
+                    type: "checkbox",
+                    value: false,
+                    label: "ubrania, które nadają się do ponownego użycia",
+                    step: 1,
+        
+                },
+                {
+                    name: "clothesToBon",
+                    type: "checkbox",
+                    value: false,
+                    label: "ubrania, do wyrzuceniaa",
+                    step: 1,
+                }
+            ],
+            // currentStep:1,
+            // isClothesToWear: false,
+            // isClothesToBin: false,
+            // isToys: false,
+            // isBooks: false,
+            // isOther: false,
+            // numberOfSacks: 0,
         }
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleClothesToWearChange = this.handleClothesToWearChange.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleClothesToWearChange = this.handleClothesToWearChange.bind(this);
     }
     // handleClothesToWearChange (e){
     //     const { }
     // }
-    handleChange(event) {
-        const { name, checked } = event.target
-        this.setState({
-            [name]: checked
-        })
+    // handleChange(event) {
+    //     const { name, checked } = event.target
+    //     this.setState({
+    //         [name]: checked
+    //     })
+    // }
+
+    handleOnChange(name, value) {
+        // const { name, value } = event.target
+        const item = this.state.form.find((input) => input.name === name)
+        console.log(item, name, value)
+        // this.setState({
+        //     form[name]: value
+        // })
     }
 
     handleSubmit = (event) => {
@@ -42,19 +68,20 @@ import {Container, Row, Col} from 'react-bootstrap';
 
                 <form onSubmit={this.handleSubmit} >
                     <Step1
-                        currentStep={this.state.currentStep}
-                        handleChange={ this.handleChange}
-                        isClothesToWear={this.isClothesToWear} 
-                        isClothesToBin = { this.isClothesToBin}
-                        isToys = {this.isToys}
-                        isBooks = {this.isBooks}
-                        isOther = {this.isOther}
+                        form = {this.state.form}
+                        // currentStep={this.state.currentStep}
+                        handleOnChange={ this.handleOnChange}
+                        // isClothesToWear={this.isClothesToWear} 
+                        // isClothesToBin = { this.isClothesToBin}
+                        // isToys = {this.isToys}
+                        // isBooks = {this.isBooks}
+                        // isOther = {this.isOther}
 
                         />
 
-                    <Step2
+                    {/* <Step2
                         currentStep={this.state.currentStep}
-                        />
+                        /> */}
                 </form>
             </>
         )
@@ -63,11 +90,29 @@ import {Container, Row, Col} from 'react-bootstrap';
 }
 
  class Step1  extends Component{
-    
+    getInputs(){
+        const inputs = this.props.form.filter(input => input.step === 1) //wyjdą wszystkie inputy, które są w step1
+        return inputs.map(input => {
+        console.log(input)
+          return  (
+            <>
+                <input 
+                    type={input.type}  
+                    name={input.name} 
+                    checked={input.checked} 
+                    onChange={(event)=>this.props.handleOnChange(input.name, event.target.value)} 
+                />
+                {input.label}
+            </>
+        )
+            }
+        )
+
+    }
     render(){
-        if (this.props.currentStep !== 1) {
-            return null
-        }
+        // if (this.props.currentStep !== 1) {
+        //     return null
+        // }
         return(
             <>
                 { <section className="form1-instruction">
@@ -83,11 +128,12 @@ import {Container, Row, Col} from 'react-bootstrap';
 
                 <div className="form-group"> 
                     <legend>Zaznacz co chcesz oddać</legend>
-                    <input type="checkbox"  name="clothesToWear" checked={this.state.isClothesToWear} onChange={this.props.handleClothesToWearChange} />ubrania, które nadają się do ponownego użycia
+                    {this.getInputs()}
+                    {/* <input type="checkbox"  name="clothesToWear" checked={this.state.isClothesToWear} onChange={this.props.handleClothesToWearChange} />ubrania, które nadają się do ponownego użycia
                     <input type="checkbox"  name="clothesToBin" checked={this.state.isClothesToBin} onChange={this.props.handleChange}/>ubrania, do wyrzucenia
                     <input type="checkbox"  name="toys" checked={this.state.isToys} onChange={this.props.handleChange} />zabawki
                     <input type="checkbox"  name="books" checked={this.state.isBooks} onChange={this.props.handleChange} />książki
-                    <input type="checkbox"  name="other" checked={this.state.isOther} onChange={this.props.handleChange} />inne
+                    <input type="checkbox"  name="other" checked={this.state.isOther} onChange={this.props.handleChange} />inne */}
                 </div>
             </>
 
