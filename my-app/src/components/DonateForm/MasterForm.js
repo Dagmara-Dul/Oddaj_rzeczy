@@ -1,5 +1,13 @@
 import React, {Component} from 'react';
 // import {Container, Row, Col} from 'react-bootstrap';
+import {
+    HashRouter,
+    Route,
+    Link,
+    Redirect,
+    Switch,
+    NavLink,
+  } from 'react-router-dom';
 
 export default class MasterForm extends Component{
     constructor(props){
@@ -10,8 +18,8 @@ export default class MasterForm extends Component{
                  {
                     name: "clothesToWear",
                     type: "checkbox",
-                    // value: true,
-                    checked: true,
+                    value: true,
+                    // checked: true,
                     label: "ubrania, które nadają się do ponownego użycia",
                     step: 1,
         
@@ -19,50 +27,42 @@ export default class MasterForm extends Component{
                 {
                     name: "clothesToBin",
                     type: "checkbox",
-                    checked: false,
-                    // value: false,
+                    // checked: false,
+                    value: false,
                     label: "ubrania, do wyrzucenia",
                     step: 1,
                 },
                 {
                     name: "toys",
                     type: "checkbox",
-                    checked: false,
-                    // value: false,
+                    // checked: false,
+                    value: false,
                     label: "zabawki",
                     step: 1, 
                 },
                 {
                     name: "books",
                     type: "checkbox",
-                    checked: false,
-                    // value: false,
+                    // checked: false,
+                    value: false,
                     label: "książki",
                     step: 1,
                 },
                 {   name: "other",
                     type: "checkbox",
-                    checked: false,
-                    // value: true,
+                    // checked: false,
+                    value: true,
                     label: "inne",
                     step: 1,
-                }
+                },
+
             ],
-            // currentStep:1,
-            // isClothesToWear: false,
-            // isClothesToBin: false,
-            // isToys: false,
-            // isBooks: false,
-            // isOther: false,
-            // numberOfSacks: 0,
+            
         }
 
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleClothesToWearChange = this.handleClothesToWearChange.bind(this);
+        
     }
-    // handleClothesToWearChange (e){
-    //     const { }
-    // }
+    
     // handleChange(event) {
     //     const { name, checked } = event.target
     //     this.setState({
@@ -72,18 +72,34 @@ export default class MasterForm extends Component{
     // handleOnChecked = () => {
 
     // }
+    
     handleOnChange = (name, value) =>{ //zakładm, że dobrze jest napisane - zobaczymy jak jest przy wysyłaniu danych na json server
         // const { name, value } = event.target
+        
+        
+
         const item = this.state.form.find((input) => input.name === name );
         // value = target.type ==="checkbox" ? target.checked : target.value;
         // let form = this.state.form;//to jest jako undefined
         console.log(item, name, value)
-        
+        const stateCopy = Object.assign({}, this.state);
+        stateCopy.form = stateCopy.form.slice();
+        console.log("stateCopy tutaj", stateCopy);
+        stateCopy.form.value = Object.assign({}, stateCopy.form.value);
+        stateCopy.form.value = value;
+        this.setState(stateCopy);
+
+
         // if(value ==="false")
-         this.setState({
-            // [form.name]: value - zakomentowałam i dalej działa - nie mam pojecia dlaczego
-            [name]:value
-        })
+
+
+        //  this.setState({
+        //     [form.name]: value // - zakomentowałam i dalej działa - nie mam pojecia dlaczego
+        //     // [name]:value
+        // })
+
+
+
         // console.log(item, name,value);
         
         // this.state.form.map((element) => {
@@ -98,7 +114,12 @@ export default class MasterForm extends Component{
         
     }
 
-    componentDidUpdate = () =>{console.log(this.state.form[1].checked)}
+
+  
+
+
+
+    componentDidUpdate = () =>{console.log(this.state.form[0].value)}
 
     handleSubmit = (event) => {
         event.preventDefault();
@@ -167,26 +188,29 @@ export default class MasterForm extends Component{
         // }
         return(
             <>
-                { <section className="form1-instruction">
+                <section className="form1-instruction">
                     <h3>Ważne!</h3>
                     <p>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
-                </section> }
-                { <section className="form1-choose">
+                </section> 
+                <section className="form1-choose">
                     <p>Krok 1/4</p>
-                    <form id="form-donate">
-
+                    <form id="form-donate" onSubmit={this.handleSubmit}>
+                        <div className="form-group"> 
+                            <legend>Zaznacz co chcesz oddać</legend>
+                            {this.getInputs()}
+                            {/* <input type="checkbox"  name="clothesToWear" checked={this.state.isClothesToWear} onChange={this.props.handleClothesToWearChange} />ubrania, które nadają się do ponownego użycia
+                            <input type="checkbox"  name="clothesToBin" checked={this.state.isClothesToBin} onChange={this.props.handleChange}/>ubrania, do wyrzucenia
+                            <input type="checkbox"  name="toys" checked={this.state.isToys} onChange={this.props.handleChange} />zabawki
+                            <input type="checkbox"  name="books" checked={this.state.isBooks} onChange={this.props.handleChange} />książki
+                            <input type="checkbox"  name="other" checked={this.state.isOther} onChange={this.props.handleChange} />inne */}
+                        </div>
+                        <div>
+                            <Link  style={{ textDecoration: 'none', color: 'white' }} to="/logged/step2">
+                                <button onClick={this.handleStepChange}>dalej</button>
+                            </ Link>
+                        </div>
                     </form>
-                </section> }
-
-                <div className="form-group"> 
-                    <legend>Zaznacz co chcesz oddać</legend>
-                    {this.getInputs()}
-                    {/* <input type="checkbox"  name="clothesToWear" checked={this.state.isClothesToWear} onChange={this.props.handleClothesToWearChange} />ubrania, które nadają się do ponownego użycia
-                    <input type="checkbox"  name="clothesToBin" checked={this.state.isClothesToBin} onChange={this.props.handleChange}/>ubrania, do wyrzucenia
-                    <input type="checkbox"  name="toys" checked={this.state.isToys} onChange={this.props.handleChange} />zabawki
-                    <input type="checkbox"  name="books" checked={this.state.isBooks} onChange={this.props.handleChange} />książki
-                    <input type="checkbox"  name="other" checked={this.state.isOther} onChange={this.props.handleChange} />inne */}
-                </div>
+                </section> 
             </>
 
         )
