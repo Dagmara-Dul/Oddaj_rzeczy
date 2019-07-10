@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+// import {Container, Row, Col} from 'react-bootstrap';
 
 export default class MasterForm extends Component{
     constructor(props){
@@ -10,16 +10,41 @@ export default class MasterForm extends Component{
                  {
                     name: "clothesToWear",
                     type: "checkbox",
-                    value: false,
+                    // value: true,
+                    checked: true,
                     label: "ubrania, które nadają się do ponownego użycia",
                     step: 1,
         
                 },
                 {
-                    name: "clothesToBon",
+                    name: "clothesToBin",
                     type: "checkbox",
-                    value: false,
-                    label: "ubrania, do wyrzuceniaa",
+                    checked: false,
+                    // value: false,
+                    label: "ubrania, do wyrzucenia",
+                    step: 1,
+                },
+                {
+                    name: "toys",
+                    type: "checkbox",
+                    checked: false,
+                    // value: false,
+                    label: "zabawki",
+                    step: 1, 
+                },
+                {
+                    name: "books",
+                    type: "checkbox",
+                    checked: false,
+                    // value: false,
+                    label: "książki",
+                    step: 1,
+                },
+                {   name: "other",
+                    type: "checkbox",
+                    checked: false,
+                    // value: true,
+                    label: "inne",
                     step: 1,
                 }
             ],
@@ -44,15 +69,36 @@ export default class MasterForm extends Component{
     //         [name]: checked
     //     })
     // }
+    // handleOnChecked = () => {
 
-    handleOnChange(name, value) {
+    // }
+    handleOnChange = (name, value) =>{ //zakładm, że dobrze jest napisane - zobaczymy jak jest przy wysyłaniu danych na json server
         // const { name, value } = event.target
-        const item = this.state.form.find((input) => input.name === name)
+        const item = this.state.form.find((input) => input.name === name );
+        // value = target.type ==="checkbox" ? target.checked : target.value;
+        // let form = this.state.form;//to jest jako undefined
         console.log(item, name, value)
-        // this.setState({
-        //     form[name]: value
-        // })
+        
+        // if(value ==="false")
+         this.setState({
+            // [form.name]: value - zakomentowałam i dalej działa - nie mam pojecia dlaczego
+            [name]:value
+        })
+        // console.log(item, name,value);
+        
+        // this.state.form.map((element) => {
+        //     return (
+        //         // console.log(element)
+        //         this.setState ({
+        //             [element.name]: value
+        //         })
+        //         )});
+        
+
+        
     }
+
+    componentDidUpdate = () =>{console.log(this.state.form[1].checked)}
 
     handleSubmit = (event) => {
         event.preventDefault();
@@ -94,15 +140,21 @@ export default class MasterForm extends Component{
         const inputs = this.props.form.filter(input => input.step === 1) //wyjdą wszystkie inputy, które są w step1
         return inputs.map(input => {
         console.log(input)
+        
           return  (
             <>
                 <input 
                     type={input.type}  
                     name={input.name} 
-                    checked={input.checked} 
-                    onChange={(event)=>this.props.handleOnChange(input.name, event.target.value)} 
+                    
+                    value={input.value}
+                    // checked={input.value}
+                    // checked={input.checked} 
+                    onChange={(event)=> { 
+                        let value = event.target.type ==="checkbox" ? event.target.checked : event.target.value;
+                        return this.props.handleOnChange(input.name, value)}} 
                 />
-                {input.label}
+                {input.label} <br />
             </>
         )
             }
