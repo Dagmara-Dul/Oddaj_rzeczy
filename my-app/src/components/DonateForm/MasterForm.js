@@ -73,7 +73,7 @@ export default class MasterForm extends Component{
 
     // }
     
-    handleOnChange = (name, value) =>{ //zakładm, że dobrze jest napisane - zobaczymy jak jest przy wysyłaniu danych na json server
+    handleOnChange = (name, value,i) =>{ //zakładm, że dobrze jest napisane - zobaczymy jak jest przy wysyłaniu danych na json server
         // const { name, value } = event.target
         
         
@@ -82,13 +82,33 @@ export default class MasterForm extends Component{
         // value = target.type ==="checkbox" ? target.checked : target.value;
         // let form = this.state.form;//to jest jako undefined
         console.log(item, name, value)
-        const stateCopy = Object.assign({}, this.state);
-        stateCopy.form = stateCopy.form.slice();
-        console.log("stateCopy tutaj", stateCopy);
-        stateCopy.form.value = Object.assign({}, stateCopy.form.value);
-        stateCopy.form.value = value;
-        this.setState(stateCopy);
+        
+        
+        // const stateCopy = Object.assign({}, this.state);
+        // stateCopy.form = stateCopy.form.slice();
+        // console.log("stateCopy tutaj", stateCopy);
+        // stateCopy.form.value = Object.assign({}, stateCopy.form.value);
+        // stateCopy.form.value = value;
+        // this.setState(stateCopy);
 
+
+    
+            
+            
+            // this.setState(state => {
+            // const form = state.form.map((elem) => {
+            // if (elem.id === i) {
+            // return {...form, value:item.value+1}
+            // } else {
+            // return elem;
+            // }
+            // });
+            
+            // return {
+            // form,
+            // };
+            // });
+            
 
         // if(value ==="false")
 
