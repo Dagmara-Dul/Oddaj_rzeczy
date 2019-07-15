@@ -55,6 +55,7 @@ export default class MasterForm extends Component{
                     label: "inne",
                     step: 1,
                 },
+                
 
             ],
             
@@ -82,7 +83,11 @@ export default class MasterForm extends Component{
         // value = target.type ==="checkbox" ? target.checked : target.value;
         // let form = this.state.form;//to jest jako undefined
         console.log(item, name, value)
-        
+        console.log(item, name, value,item.name,item.value) //to mi się fajnie wyświetla
+
+        this.setState({
+            [item.value]: value //to nie działa
+        })
         
         // const stateCopy = Object.assign({}, this.state);
         // stateCopy.form = stateCopy.form.slice();
