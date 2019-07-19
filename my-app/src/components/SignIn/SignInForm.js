@@ -46,15 +46,27 @@ export default class SignInForm extends Component{
         let valid = true;
 
         this.setState({
-            userEmail: false,
-            password: false
+            userEmail: "",
+            password: "",
+            reapetedPassword:""
         })
 
-        if( this.state.userEmail.length <=6 ){ //this.state.userEmail.indexOf("m") != -1 &&
+        if( this.state.userEmail.indexOf('@') <=-1 || this.state.userEmail.length <=5){ //this.state.userEmail.indexOf("m") != -1 &&  || 
             valid = false
-            console.log("Email powinien mieć więcej niż 4 znaki i zawierać @")
-            this.setState({userEmailError: "Email powinien mieć więcej niż 4 znaki i zawierać @"})
+            console.log("Email powinien mieć więcej niż 5 znaków i zawierać @")
+            this.setState({userEmailError: "Email powinien mieć więcej niż 5 znaków i zawierać @"})
         } 
+
+        if(this.state.password != this.state.reapetedPassword){
+            valid = false
+            console.log("podane hasła są różne")
+            this.setState({passwordError: "podane hasła się nie są takie same"})
+        }
+
+        if( this.state.password.length <= 4){
+            valid = false;
+            this.setState({passwordError: "hasło powinno mieć co najlmniej 5 znaków"})
+        }
         
         return valid;
     }
@@ -96,7 +108,7 @@ export default class SignInForm extends Component{
                                 <form onSubmit = { this.handleFormSubmit }>
                                     <input name="email" type="email" placeholder="Email" value = { this.state.userEmail } onChange = { this.handleUserEmailChange }></input>
 
-                                    {this.state.userEmailError && <span>{this.state.userEmailError}</span>}
+                                    
 
                                     <input name="password" type="password" placeholder="Hasło" value = { this.state.password } onChange={ this.handlePasswordChange }></input>
                                     <input name="password" type="password" placeholder="Powtórz hasło" value = { this.state.reapetedPassword } onChange={ this.handleRepeatedPasswordChange }></input><br />
@@ -108,6 +120,8 @@ export default class SignInForm extends Component{
                                     
                                     <button type="submit">Załóż konto</button>
                                 </form>
+                                {this.state.userEmailError && <span>{this.state.userEmailError}</span>} <br />
+                                {this.state.passwordError && <span>{ this.state.passwordError }</span>}
                             </div>
                         
                         </section>
