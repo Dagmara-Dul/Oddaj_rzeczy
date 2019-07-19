@@ -53,6 +53,8 @@ export default class MasterForm extends Component{
             
         }
 
+        this.handleOnChange = this.handleOnChange.bind(this);
+
         
     }
     
@@ -66,16 +68,16 @@ export default class MasterForm extends Component{
 
     // }
     
-    handleOnChange = (event) =>{ 
+    handleOnChange (event) { 
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = event.name;
+        const name = target.name;
         
         console.log(target, value, name);
 
-        // this.setState({
-        //     [name]:value
-        // })
+        this.setState({
+            [name]:value
+        })
     }
 
 
@@ -140,7 +142,7 @@ export default class MasterForm extends Component{
                     //     let value = event.target.type ==="checkbox" ? event.target.checked : event.target.value; //czy to tuja jest ok? Czy to coś daje? co?
                     //     return this.props.handleOnChange(input.name, value)}} 
 
-                    onChange = { this.handleOnChange }
+                    onChange = { this.props.handleOnChange }
                 />
                 {input.label} <br />
             </>
