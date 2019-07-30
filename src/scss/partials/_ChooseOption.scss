@@ -1,0 +1,96 @@
+/* poniżej styluję komponent ChooseOption*/
+// .choose-option{
+//     // display:flex;
+//     // justify-content:flex-end;
+//     align-items: center;
+//     width:100%;
+//     height: 80vh;
+
+//   }
+.choose-option-div {
+  display: none;
+
+  @include lg {
+
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    align-items: center;
+
+    //   width:50%;
+  }
+}
+
+.choose-option p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.choose-option p span {
+  font-size: 34px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.choose-option-border {
+  background-image: url('./images/decoration.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1.5rem;
+  width: 100%;
+  margin: 1em auto;
+}
+
+.choose-option .give-or-organise {
+  width: 80%;
+  min-height: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 1em auto;
+}
+
+.choose-option .give-or-organise a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid grey;
+  text-align: center;
+  width: calc(50% - 2rem);
+  padding-top: 0.6rem;
+  padding-bottom: 0.5rem;
+}
+
+.choose-option .give-or-organise span {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 20px;
+  
+
+
+}
+
+.choose-option-div-xs{
+  // background-image: url('./images/ancient-animals-assorted-1038684.jpg');
+  padding:3em 2em;
+  h3, p, span{
+    color:white;
+  }
+  h3{
+    font-size: 14px;
+  }
+  p span{
+    font-size: 16px;
+    text-shadow: 1px 1px 2px #000000;
+    &:first-of-type{
+      text-transform: uppercase;
+
+    }
+  }
+  @include lg{
+    display:none;
+  }
+}

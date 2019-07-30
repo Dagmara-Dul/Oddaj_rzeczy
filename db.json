@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "users": [
+    {
+      "userEmail": "kaja.maja@wp.pl",
+      "password": "kajaEm",
+      "id": 1
+    },
+    {
+      "userEmail": "michal.jablonka@onet.pl",
+      "password": "jabluszko",
+      "id": 2
+    },
+    {
+      "userEmail": "gzymsik@poczta.fm",
+      "password": "terakota",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "donation": [
+    {
+      "numberOfSacks": "2",
+      "id": 1
+    },
+    {
+      "numberOfSacks": "2",
+      "isClothesToWear": true,
+      "isClothesToBin": false,
+      "isToys": false,
+      "isBooks": true,
+      "isOther": false,
+      "id": 2
+    },
+    {
+      "numberOfSacks": "5",
+      "isClothesToWear": true,
+      "isClothesToBin": false,
+      "isToys": false,
+      "isBooks": false,
+      "isOther": false,
+      "id": 3
+    }
+  ]
+}

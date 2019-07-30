@@ -1,0 +1,33 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
+import StartSection from './../StartSection'
+import StatSection from './../StatSection';
+import StepsInfo from './../StepsInfo';
+import AboutUs from './../AboutUs';
+import WhoWeHelp from './../WhoWeHelp.js';
+import Contact from './../Contact';
+import Footer from './../Footer';
+// import Button from './elements/Button';
+import { Container } from 'react-bootstrap';
+
+export default class MainPage extends Component{
+    render(){
+        return(
+            <>
+                <Container fluid={true} offset={0} style={{ marginLeft: 0, marginRight: 0 }} >
+                    <StartSection />
+                    <StatSection />
+                    <StepsInfo />
+                    <AboutUs />
+                    <WhoWeHelp />
+                    {/* <Button text="wcisnij" variant="primary" /> */}
+                    <Contact />
+                    <Footer />
+                </Container>
+            </>
+        )
+    }
+}
+
+

@@ -1,0 +1,88 @@
+/*StepsInfo*/
+.steps-info-section-package{
+    margin-top:4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .steps-info-section-package p{
+    font-size: 32px;
+    font-weight: 300;
+    text-align:center;
+  }
+  
+  .steps-info-section-package .steps-info-image{
+    background-image: url('./images/decoration.png');
+    width:100%;
+    min-height:2rem;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .steps-info-instructions{
+    min-height:8rem;
+    width:100%;
+    background-color: #EAEAEA;
+    margin-top:2rem;
+  
+    display:flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 3rem 3rem 2rem; ;
+  }
+  
+  .steps-info-single-instruction{
+    width: calc(25% - 1em);
+    min-height: 8rem;
+  
+    display:flex;
+    flex-direction:column;
+  }
+  
+  .steps-info-single-instruction i{
+    font-size:58px;
+    color:grey;
+    align-self: center;
+  }
+  
+  .steps-info-single-instruction .quick-info{
+    margin-top: 2rem;
+    font-size: 14px;
+    text-align: center;
+    position:relative;
+
+    &:after{
+      content:"-------------";
+      color: transparent;
+      border-bottom: 1px solid grey;
+      display:inline-block;
+      position:absolute;
+      top:1em;
+      left:35%;
+
+    }
+  }
+  
+  .steps-info-single-instruction .steps-more-info{
+    margin-top: 2rem;
+    font-size: 14px;
+    text-align: center;
+    width:80%;
+    margin: 0 auto;
+  }
+  
+  .steps-sign-in{
+    text-decoration:none;
+    color:black;
+    display:inline-block;
+    border: 1px solid grey;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+  }
+  
+  .steps-sign-in span{
+    font-weight: 100;
+    font-size:28px;
+    
+    text-transform: uppercase;
+  }

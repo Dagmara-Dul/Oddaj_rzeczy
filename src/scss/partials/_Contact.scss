@@ -1,0 +1,9 @@
+@import './ContactForm';
+
+section.contact{
+    background-image: url('./images/footer_bg_img.jpg');
+    background-repeat: no-repeat;
+    width:100%;
+    background-size:cover;
+    min-height: 300px;
+}
