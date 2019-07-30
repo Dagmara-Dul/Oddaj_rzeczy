@@ -19,7 +19,8 @@ export default class MainPage extends Component{
     }
 
     componentWillMount = () => {
-        fetch(`${window.location.protocol}//${window.location.hostname}:3001/users`)
+        fetch (`https://oddaj-rzeczy-serwer.herokuapp.com/users`)
+       // fetch(`${window.location.protocol}//${window.location.hostname}:3001/users`)
             .then((json) => json.json())
             .then((json) => this.setState({ users: JSON.stringify(json) }))
             .catch((err) => this.setState({ users: JSON.stringify(err) }))
