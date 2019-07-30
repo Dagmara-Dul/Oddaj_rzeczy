@@ -82,7 +82,8 @@ export default class SignInForm extends Component{
                 userEmail: this.state.userEmail,
                 password: this.state.password
             }
-            fetch(`${window.location.protocol}//${window.location.hostname}:3001/users`,{
+            // fetch(`${window.location.protocol}//${window.location.hostname}:3001/users`,{
+                fetch (`https://oddaj-rzeczy-serwer.herokuapp.com/users`,{
                 headers:{
                     'Content-Type': 'application/json'
                 },
