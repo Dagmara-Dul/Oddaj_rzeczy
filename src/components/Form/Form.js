@@ -41,7 +41,8 @@ export default class Form extends Component{
             
         }
 
-        fetch(`${window.location.protocol}//${window.location.hostname}:3001/donation`,{
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/users`,{
+        // fetch(`${window.location.protocol}//${window.location.hostname}:3001/donation`,{
             headers:{
                 'Content-Type':'application/json'
             },

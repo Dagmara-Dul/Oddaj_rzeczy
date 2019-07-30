@@ -26,6 +26,16 @@
       "userEmail": "asdfsdf@dasd.ls",
       "password": "rererere",
       "id": 4
+    },
+    {
+      "userEmail": "daga@dd.dd",
+      "password": "dagaga",
+      "id": 5
+    },
+    {
+      "userEmail": "mirek@mm.m",
+      "password": "mirek",
+      "id": 6
     }
   ],
   "comments": [

@@ -19,7 +19,7 @@ export default class MainPage extends Component{
     }
 
     componentWillMount = () => {
-        fetch (`https://oddaj-rzeczy-serwer.herokuapp.com/users`)
+        fetch(`${process.env.REACT_APP_BACKEND_URL}/users`)
        // fetch(`${window.location.protocol}//${window.location.hostname}:3001/users`)
             .then((json) => json.json())
             .then((json) => this.setState({ users: JSON.stringify(json) }))
@@ -32,6 +32,7 @@ export default class MainPage extends Component{
             <Container fluid={true} offset={0} style={{ marginLeft: 0, marginRight: 0 }} >
                 <div>
                     {this.state.users}
+                    {process.env.REACT_APP_BACKEND_URL || "dupa"}
                 </div>
                 <StartSection />
                 <StatSection />
