@@ -41,7 +41,7 @@ export default class Form extends Component{
             
         }
 
-        fetch('http://localhost:3001/donation',{
+        fetch(`${window.location.protocol}//${window.location.hostname}:3001/donation`,{
             headers:{
                 'Content-Type':'application/json'
             },
