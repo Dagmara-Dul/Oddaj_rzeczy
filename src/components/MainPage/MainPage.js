@@ -20,8 +20,8 @@ export default class MainPage extends Component{
 
     componentWillMount = () => {
         fetch(`${process.env.REACT_APP_BACKEND_URL}/users`)
-       // fetch(`${window.location.protocol}//${window.location.hostname}:3001/users`)
-            .then((json) => json.json())
+       // fetch(`${window.location.protocol}//${window.location.hostname}:3001/users`) //to można sobie podejrzeć/odnaleźć w consoli
+            .then((json) => json.json()) //w ten sposób lekko opóźniamy działanie fetcha i dzięki temu działa i nie wyskakuje błąd
             .then((json) => this.setState({ users: JSON.stringify(json) }))
             .catch((err) => this.setState({ users: JSON.stringify(err) }))
     }
@@ -30,10 +30,10 @@ export default class MainPage extends Component{
         console.log(this.state.users)
         return(
             <Container fluid={true} offset={0} style={{ marginLeft: 0, marginRight: 0 }} >
-                <div>
+                {/* <div> do sprawdzenia bazy danych
                     {this.state.users}
-                    {process.env.REACT_APP_BACKEND_URL || "dupa"}
-                </div>
+                    {process.env.REACT_APP_BACKEND_URL || "error"}
+                </div> */}
                 <StartSection />
                 <StatSection />
                 <StepsInfo />
@@ -41,7 +41,7 @@ export default class MainPage extends Component{
                 <WhoWeHelp />
                 {/* <Button text="wcisnij" variant="primary" /> */}
                 <Contact />
-                <Footer />
+                {/* <Footer /> */}
             </Container>
         )
     }

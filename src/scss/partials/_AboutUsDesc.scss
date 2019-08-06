@@ -1,9 +1,11 @@
 .about-us-desc {
+    padding:2em 3em;
     
-        p.about-us-title {
+        h2.about-us-title {
             font-size: 4rem;
             text-align: center;
             font-weight:100;
+            
             
             @media (min-width: 992px){
                 font-size: 34px;
@@ -26,6 +28,7 @@
     .about-us-desc-desc{
         text-align: center;
         margin-top: 2rem;
+        
         font-size: 16px;
 
         @media (min-width:992px){

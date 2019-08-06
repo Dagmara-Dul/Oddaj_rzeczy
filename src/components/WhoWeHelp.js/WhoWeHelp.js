@@ -20,10 +20,10 @@ export default class WhoWeHelp extends Component{
                     </Row>
                     <Row>
                         <Col>
-                            <div>nazwy fundacji</div>
+                            {/* <div>nazwy fundacji</div> w trakcie realizacji*/} 
                         </Col>
                         <Col>
-                            <div>opis działalności</div>
+                            {/* <div>opis działalności</div> w trakcie realizacji*/}
                         </Col>
                     </Row>
                 </Container>

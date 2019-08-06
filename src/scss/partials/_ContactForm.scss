@@ -1,8 +1,68 @@
 .contact-form-package{
     display:flex;
     flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding:3em;
+
+
     .contact-inputs{
         display:flex;
+        justify-content: space-between;
+        padding: 2em 0;
+        input{
+            width: calc(50% - 1em);
+            border:none;
+            border-bottom: 1px solid grey;
+            background-color: transparent;
+            
+        }
+        input::placeholder { /* Chrome/Opera/Safari */
+            font-size: 0.8rem;
+            padding-left: 0.5rem;
+            color:$color-input;
+            
+          }
         
     }
+    textarea{
+        border:none;
+        border-bottom: 1px solid grey;
+        background-color: transparent;
+        margin-bottom: 3em;
+        // outline: none;
+        resize:none;
+        &::placeholder { /* Chrome/Opera/Safari */
+            font-size: 0.8rem;
+            padding-left: 0.5rem;
+            color:$color-input;
+            
+          }
+    
+    }
+    h4{
+        font-size:0.8rem;
+        text-transform: uppercase;
+        padding: 3em 0 1em 0;
+        color: #3E3E3E;
+
+    }
+
+    button{
+        width: 5em;
+        height: 2.5em;
+        font-size: 0.8rem;
+        color: $color-input;
+        text-align: center;
+        border:1px solid $input-color;
+        // padding: 0.5em 1em;
+        background: transparent;
+        padding: 0.5em 1em;
+        margin: 0 auto;
+    }
+
+    @include lg{
+        background-color: transparent;
+        padding:0;
+    }
 }
+

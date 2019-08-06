@@ -11,8 +11,8 @@ export default class ContactForm extends Component{
             <section className="contact-form">
             
                 <Container  className="contact-form-container">
-                    <Row>
-                        <Col >
+                    {/* <Row>
+                        <Col > */}
                             <form>
                                 <div className="contact-form-package">
                                     <h4>Formularz kontaktowy</h4>
@@ -25,9 +25,9 @@ export default class ContactForm extends Component{
                                 </div>
                             </form>
                             
-                        </Col>
+                        {/* </Col>
                         
-                    </Row>
+                    </Row> */}
                 </Container>
                 
             </section>

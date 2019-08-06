@@ -51,16 +51,16 @@
     text-align: center;
     position:relative;
 
-    &:after{
-      content:"-------------";
-      color: transparent;
-      border-bottom: 1px solid grey;
-      display:inline-block;
-      position:absolute;
-      top:1em;
-      left:35%;
+    // &:after{
+    //   content:"-------------";
+    //   color: transparent;
+    //   border-bottom: 1px solid grey;
+    //   display:inline-block;
+    //   position:absolute;
+    //   top:1em;
+    //   left:35%;
 
-    }
+    // } wykosowane do prezentacji strony
   }
   
   .steps-info-single-instruction .steps-more-info{

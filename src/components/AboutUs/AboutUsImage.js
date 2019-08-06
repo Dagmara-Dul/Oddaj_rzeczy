@@ -10,11 +10,11 @@ export default class AboutUsImage extends Component{
     render(){
         return(
             <section className="about-us-image">
-                <Image src={aboutUsImg} className="about-us-img"/>
-                {/* <div className="about-us-img">
-                
+                {/* <Image src={aboutUsImg} className="img-fluid" className="about-us-img"/>  */}
+                <div className="about-us-img"> 
+                    {/* <img src={aboutUsImg} className="about-us-img"  /> */}
                     
-                </div> */}
+                </div>
             </section>
         )
     }
