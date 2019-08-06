@@ -1,0 +1,73 @@
+.sign-in-form {
+    margin-top:5em;
+    .sign-in-form-div {
+        display: flex;
+        flex-direction: column;
+        // justify-content:center;
+        align-items: center;
+
+        form {
+            // text-align:center;
+            display: flex;
+            flex-direction: column;
+            width:100%;
+
+        }
+
+        .sign-in-form-image {
+            width: 100%;
+            min-height: 1rem;
+            background-image: url('./images/decoration.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom:2em;
+
+
+            @media (min-width:992px) {
+                min-height: 1.5rem;
+            }
+        }
+
+      
+        input {
+            border: none;
+            border-bottom: 1px solid grey;
+            background-color: transparent;
+            margin-bottom: 2em;
+
+        }
+
+        input::placeholder {
+            /* Chrome/Opera/Safari */
+            font-size: 0.8rem;
+            padding-left: 0.5rem;
+            color: $color-input;
+
+        }
+    }
+
+    .btns{
+        display:flex;
+        justify-content:space-between;
+        button{
+            // border:.5px solid $color-input;
+            // background-color: transparent;
+            // font-weight:100;
+
+        width: 8em;
+        height: 3em;
+        font-size: 0.8rem;
+        color: $color-input;
+        text-align: center;
+        border:1px solid $input-color;
+        background: transparent;
+        padding: 0.5em 1em;
+        &:hover{
+        border-color:$color-btn-hover;    
+        }
+        
+            
+        }
+    }
+}

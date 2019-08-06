@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {Container, Row, Col} from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 import {
     HashRouter,
     BrowserRouter as Router,
@@ -99,7 +98,8 @@ export default class SignInForm extends Component{
         return(
             // <Router>
                 <Row style={{ marginLeft: 0, marginRight: 0 }}>
-                    <Col xs={12} lg={{ span:4, offset:4 }} style={{ marginLeft: 0, marginRight: 0 }}>
+                    {/* <Col xs={12} lg={{ span:4, offset:4 }} style={{ marginLeft: 0, marginRight: 0 }}> */}
+                    <Col xs={12} lg={{ span:6, offset:3 }}>
                         <section className="sign-in-form" >
                             <div className="sign-in-form-div">
                                 <FormHeading text={"Załóż konto"}></FormHeading>
@@ -112,15 +112,17 @@ export default class SignInForm extends Component{
                                     <input name="email" type="email" placeholder="Email" value = { this.state.userEmail } onChange = { this.handleUserEmailChange }></input>
                                     <input name="password" type="password" placeholder="Hasło" value = { this.state.password } onChange={ this.handlePasswordChange }></input>
                                     <input name="password" type="password" placeholder="Powtórz hasło" value = { this.state.reapetedPassword } onChange={ this.handleRepeatedPasswordChange }></input><br />
-                                    <HashRouter>
-                                        <Link  style={{ textDecoration: 'none' }} to="/login">
-                                            <button>Zaloguj się</button>
-                                        </Link>
-                                    </ HashRouter>
-                                    {/* <NavLink  style={{ textDecoration: 'none' }} to="/login">
-                                            <button>Zaloguj się</button>
-                                    </NavLink> */}
-                                    <button type="submit">Załóż konto</button>
+                                    <div className='btns'>
+                                        <HashRouter>
+                                            <Link  style={{ textDecoration: 'none' }} to="/login">
+                                                <button>Zaloguj się</button>
+                                            </Link>
+                                        </ HashRouter>
+                                        {/* <NavLink  style={{ textDecoration: 'none' }} to="/login">
+                                                <button>Zaloguj się</button>
+                                        </NavLink> */}
+                                        <button type="submit">Załóż konto</button>
+                                    </div>
                                 </form>
                                 {this.state.userEmailError && <span>{this.state.userEmailError}</span>} <br />
                                 {this.state.passwordError && <span>{ this.state.passwordError }</span>}
