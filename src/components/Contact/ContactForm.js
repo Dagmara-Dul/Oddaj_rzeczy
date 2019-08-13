@@ -13,7 +13,9 @@ export default class ContactForm extends Component{
             email:"",
             message:"",
             userEmailError:"",
-            nameError: ""
+            nameError: "",
+            messageError:"",
+            isValid: ""
         }
     }
     
@@ -23,7 +25,7 @@ export default class ContactForm extends Component{
         console.log("potwierdzam formularz")
 
         if(this.validData()){
-            const constactMessage ={
+            const contactMess ={
                 name: this.state.name,
                 email: this.state.email,
                 textMessage: this.state.message
@@ -36,10 +38,14 @@ export default class ContactForm extends Component{
                 },
 
                 method: 'POST',
-                body:JSON.stringify(usr)
+                body:JSON.stringify(contactMess)
             }).then(() => {console.log("validation")}) //tu mogę dać jakąś informację "dziękuję za przesłanie formularza" lub coś takiego
+            .then((this.setState({isValid:true, name:"", email:"", message:""})))
+            // .then(this.setState({name:"", email:"", message:""}))
         }
     }
+
+    componentDidUpdate=()=>{console.log("update")}
 
     handleOnChange = (ev) => {
         // console.log(ev.target.name);
@@ -50,7 +56,12 @@ export default class ContactForm extends Component{
        
     validData = () =>{
         let valid = true;
-
+        this.setState({//czyszczenie starych bledow
+            nameError:"",
+            userEmailError: "",
+            messageError:"",
+            isValid:""
+        })
         this.setState({
             name: "",
             email: "",
@@ -60,19 +71,19 @@ export default class ContactForm extends Component{
         if(this.state.name.length <=0){
             valid = false
             console.log("podaj swoje imię")
-            this.setState({nameError: "podaj swoje imię"})
+            this.setState({nameError: "podaj swoje imię", isValid: false})
         }
 
         if( this.state.email.indexOf('@') <=-1 || this.state.email.length <=5){ //this.state.userEmail.indexOf("m") != -1 &&  || 
             valid = false
             console.log("Email powinien mieć więcej niż 5 znaków i zawierać @")
-            this.setState({userEmailError: "Email powinien mieć więcej niż 5 znaków i zawierać @"})
+            this.setState({userEmailError: "email powinien mieć więcej niż 5 znaków i zawierać @", isValid: false})
         } 
 
         if( this.state.message.length <= 0){
             valid = false;
             console.log("wiadomość jest pusta")
-            this.setState({messageError: "wiadomość jest pusta"})
+            this.setState({messageError: "wiadomość jest pusta", isValid: false})
         }
         
         return valid;
@@ -89,13 +100,20 @@ export default class ContactForm extends Component{
                                 <div className="contact-form-package">
                                     <h4>Formularz kontaktowy</h4>
                                     <div className="contact-inputs">
-                                        <input type="text" name="name" placeholder="Imię" onChange = { this.handleOnChange }></input>
-                                        <input type="email" name="email" placeholder="Email" onChange = { this.handleOnChange }></input>
+                                        <input value={this.state.name} type="text" name="name" placeholder="Imię" onChange = { this.handleOnChange }></input>
+                                        <input value={this.state.email} type="email" name="email" placeholder="Email" onChange = { this.handleOnChange }></input>
                                     </div>
-                                    <textarea name="message" placeholder="Wiadomość" onChange = { this.handleOnChange }></textarea>
+                                    <textarea value={this.state.message} name="message" placeholder="Wiadomość" onChange = { this.handleOnChange }></textarea>
                                     <button type="submit">Wyślij</button>
                                 </div>
                             </form>
+                            <div>
+                                {this.state.nameError && <span className="contact-form-error">{ this.state.nameError }</span>} <br />
+                                {this.state.userEmailError && <span className="contact-form-error">{this.state.userEmailError}</span>} <br />
+                                {this.state.messageError && <span className="contact-form-error">{this.state.messageError}</span>} <br />
+                                {this.state.isValid && <span className="contact-form-message_sent">{"Dziękujemy! Twoja wiadomość została wysłana"}</span>}
+                                
+                            </div>
                             
                         {/* </Col>
                         

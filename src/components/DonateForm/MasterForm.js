@@ -18,7 +18,7 @@ constructor(props) {
             {
                 name: "clothesToWear",
                 type: "checkbox",
-                value: true,
+                value: false,
                 // checked: true,
                 label: "ubrania, które nadają się do ponownego użycia",
                 step: 1,
@@ -51,7 +51,7 @@ constructor(props) {
             {   name: "other",
                 type: "checkbox",
                 // checked: false,
-                value: true,
+                value: false,
                 label: "inne",
                 step: 1,
             },

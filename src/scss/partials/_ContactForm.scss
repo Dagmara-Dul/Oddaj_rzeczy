@@ -64,5 +64,21 @@
         background-color: transparent;
         padding:0;
     }
+
+    
+}
+
+.contact-form-message_sent{
+    font-size: .7rem;
+    color:#228240;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.contact-form-error{
+    font-size:.7rem;
+    color:red;
+    font-weight: 100;
+    text-transform: uppercase;
 }
 

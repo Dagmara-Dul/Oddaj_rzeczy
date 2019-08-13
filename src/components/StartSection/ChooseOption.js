@@ -28,7 +28,7 @@ import {
                         <div className="choose-option-border"></div>
                         <div className="give-or-organise">
                             
-                                <Link  style={{ textDecoration: 'none' }} to="/login">
+                                <Link  style={{ textDecoration: 'none' }} to="/logged">
                                     <span>oddaj <br></br> rzeczy</span>
                                 </Link>
                             
