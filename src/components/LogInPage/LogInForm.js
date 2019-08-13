@@ -15,11 +15,24 @@ export default class LogInForm extends Component{
         this.state={
             email: "",
             password:"",
+            logged:"false"
         }
     }
     
+    handleLogInFormSubmit=(e)=>{
+        e.preventDefault();
+        console.log(`potwierdzam przeslanie formularza`);
+        
+        fetch(`http://localhost:3001/users`).then( resp => resp.json())
+        .then(resp => {
+            console.log( resp );
+            this.checkUser( resp )
+            });
+    }
     
-    
+    ckeckUser = () =>{
+        
+    }
     render(){
         return(
             <>

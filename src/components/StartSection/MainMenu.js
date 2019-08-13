@@ -52,7 +52,7 @@ export default class MainMenu extends Component{
         return menuItem.map((item)=>{
             const Component = this.props.isHome ? Link : NavLink;
             return( 
-            <li  key={item.id}><Component to={this.props.isHome ? item.to : item.path} {...options} ><span> {item.name}</span></Component></li> //unique key problem
+            <li  key={item.name}><Component to={this.props.isHome ? item.to : item.path} {...options} ><span> {item.name}</span></Component></li> //unique key problem
             )
         }) 
     }
