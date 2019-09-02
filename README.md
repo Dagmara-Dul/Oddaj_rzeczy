@@ -10,4 +10,4 @@ Stronę można podejrzeć na: https://oddaj-rzeczy-her.herokuapp.com/
 
 baza danych (wybrane elementy): https://oddaj-rzeczy-serwer.herokuapp.com/
 
-autor: Anna Dadej
+autor: Anna Dadej (UX)
